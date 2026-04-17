@@ -1,0 +1,8 @@
+{
+  "name": "list_workspaces",
+  "description": "List all workspaces the authenticated principal has access to. Returns workspace name (slug), mode (table or doc), and creation date.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  }
+}

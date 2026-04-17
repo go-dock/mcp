@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "dock": {
+      "command": "npx",
+      "args": ["-y", "@go-dock/mcp"],
+      "env": {
+        "DOCK_API_KEY": "dk_..."
+      }
+    }
+  }
+}

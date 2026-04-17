@@ -1,0 +1,18 @@
+{
+  "name": "get_recent_events",
+  "description": "Get recent activity events for a workspace — who did what, when. Useful for understanding what's happened since you last looked.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "slug": {
+        "type": "string",
+        "description": "The workspace slug"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Max events to return (default 20)"
+      }
+    },
+    "required": ["slug"]
+  }
+}

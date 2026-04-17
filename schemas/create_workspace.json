@@ -1,0 +1,19 @@
+{
+  "name": "create_workspace",
+  "description": "Create a new workspace. Choose 'table' for structured rows/columns or 'doc' for freeform rich text. The slug becomes the URL-friendly identifier.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The workspace name (will be slugified, e.g. 'reddit-tracker')"
+      },
+      "mode": {
+        "type": "string",
+        "enum": ["table", "doc"],
+        "description": "Workspace mode"
+      }
+    },
+    "required": ["name", "mode"]
+  }
+}

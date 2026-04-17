@@ -1,0 +1,19 @@
+{
+  "name": "create_row",
+  "description": "Append a new row to a table-mode workspace. The data field is a JSON object with column-name keys. Status column accepts: drafted, queued, sealed, active, blocked.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "slug": {
+        "type": "string",
+        "description": "The workspace slug"
+      },
+      "data": {
+        "type": "object",
+        "description": "Row data as a JSON object (e.g. {\"title\": \"My post\", \"status\": \"drafted\", \"notes\": \"Initial draft\"})",
+        "additionalProperties": true
+      }
+    },
+    "required": ["slug", "data"]
+  }
+}

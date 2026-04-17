@@ -1,0 +1,14 @@
+{
+  "name": "get_workspace",
+  "description": "Get details about a specific workspace by its slug, including columns (for table mode), member count, and row count.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "slug": {
+        "type": "string",
+        "description": "The workspace slug, e.g. 'reddit-tracker'"
+      }
+    },
+    "required": ["slug"]
+  }
+}

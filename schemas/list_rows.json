@@ -1,0 +1,22 @@
+{
+  "name": "list_rows",
+  "description": "List all rows in a table-mode workspace. Returns rows with their data (a JSON object of column-name to value), creation time, and the principal who created/updated each row.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "slug": {
+        "type": "string",
+        "description": "The workspace slug"
+      },
+      "limit": {
+        "type": "number",
+        "description": "Max rows to return (default 100, max 1000)"
+      },
+      "offset": {
+        "type": "number",
+        "description": "Number of rows to skip (for pagination)"
+      }
+    },
+    "required": ["slug"]
+  }
+}
