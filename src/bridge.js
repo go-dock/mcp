@@ -3,7 +3,7 @@
  * @go-dock/mcp — local stdio bridge to the Dock MCP server.
  *
  * Why this exists:
- *   Dock's MCP server speaks JSON-RPC over HTTPS at godock.ai/api/mcp.
+ *   Dock's MCP server speaks JSON-RPC over HTTPS at trydock.ai/api/mcp.
  *   That's perfect for Claude.ai's remote-connector UX, but many MCP
  *   clients (Claude Desktop today, Cursor, Windsurf, Zed, Cline,
  *   Continue) still prefer a local stdio server. This package is the
@@ -25,14 +25,14 @@ import process from "node:process";
 
 const API_KEY = process.env.DOCK_API_KEY;
 const ENDPOINT =
-  process.env.DOCK_MCP_URL || "https://godock.ai/api/mcp";
+  process.env.DOCK_MCP_URL || "https://trydock.ai/api/mcp";
 
 if (!API_KEY) {
   process.stderr.write(
     [
       "@go-dock/mcp: DOCK_API_KEY is required.",
       "",
-      "Get a key in Settings → API keys at https://godock.ai.",
+      "Get a key in Settings → API keys at https://trydock.ai.",
       "Then set it in your MCP client config, e.g.:",
       "",
       '  "env": { "DOCK_API_KEY": "dk_..." }',

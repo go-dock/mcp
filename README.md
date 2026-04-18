@@ -1,6 +1,6 @@
 # @go-dock/mcp
 
-Local stdio bridge to the [Dock](https://godock.ai) MCP server. Point any
+Local stdio bridge to the [Dock](https://trydock.ai) MCP server. Point any
 MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue)
 at your Dock workspaces in one config change.
 
@@ -8,8 +8,8 @@ at your Dock workspaces in one config change.
 >
 > If your agent supports **remote MCP connectors** (Claude.ai web,
 > Claude.ai Projects), you don't need this — add
-> `https://godock.ai/api/mcp` as a custom connector and follow the OAuth
-> flow. See the [MCP reference](https://godock.ai/docs/mcp).
+> `https://trydock.ai/api/mcp` as a custom connector and follow the OAuth
+> flow. See the [MCP reference](https://trydock.ai/docs/mcp).
 >
 > This package is for agents that only speak **local stdio MCP** — the
 > dominant pattern for Claude Desktop and most code-editor agents today.
@@ -17,7 +17,7 @@ at your Dock workspaces in one config change.
 ## Quickstart
 
 1. Get an API key in Dock's Settings → API keys
-   ([godock.ai](https://godock.ai)).
+   ([trydock.ai](https://trydock.ai)).
 2. Add the config for your agent below.
 3. Restart the agent. You'll see Dock's 8 tools appear.
 
@@ -68,13 +68,13 @@ in [`schemas/`](./schemas).
 | [`create_workspace`](./schemas/create_workspace.json) | Create a new workspace |
 | [`get_recent_events`](./schemas/get_recent_events.json) | Read the activity log |
 
-Full reference with examples: [godock.ai/docs/mcp](https://godock.ai/docs/mcp).
+Full reference with examples: [trydock.ai/docs/mcp](https://trydock.ai/docs/mcp).
 
 ## How the bridge works
 
 The bridge is a ~100-line Node process ([`src/bridge.js`](./src/bridge.js)).
 Every JSON-RPC message your agent writes on stdin is forwarded over HTTPS
-to `https://godock.ai/api/mcp` with your `DOCK_API_KEY` as Bearer auth.
+to `https://trydock.ai/api/mcp` with your `DOCK_API_KEY` as Bearer auth.
 The hosted server owns authentication, rate limits, audit, and tool
 execution. The bridge stores no state and logs no request bodies.
 
@@ -83,7 +83,7 @@ Environment variables:
 | Variable | Required? | Purpose |
 |---|---|---|
 | `DOCK_API_KEY` | yes | Bearer token (get one from Settings → API keys) |
-| `DOCK_MCP_URL` | no | Override the upstream endpoint (staging / self-host). Default: `https://godock.ai/api/mcp` |
+| `DOCK_MCP_URL` | no | Override the upstream endpoint (staging / self-host). Default: `https://trydock.ai/api/mcp` |
 
 ## Security
 
@@ -94,7 +94,7 @@ Environment variables:
   401 immediately on revocation.
 - Keys are stored as SHA-256 hashes on Dock's side, not plaintext. A
   Dock DB leak wouldn't expose usable credentials.
-- See the full [security doc](https://godock.ai/docs/security) for the
+- See the full [security doc](https://trydock.ai/docs/security) for the
   threat model, the revocation runbook, and what data is audited.
 
 ## License

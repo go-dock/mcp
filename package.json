@@ -1,6 +1,6 @@
 {
   "name": "@go-dock/mcp",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Local stdio MCP bridge to Dock — point any MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue) at your Dock workspaces.",
   "bin": {
     "dock-mcp": "src/bridge.js"
