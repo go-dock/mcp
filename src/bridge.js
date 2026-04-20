@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @go-dock/mcp — local stdio bridge to the Dock MCP server.
+ * @trydock/mcp — local stdio bridge to the Dock MCP server.
  *
  * Why this exists:
  *   Dock's MCP server speaks JSON-RPC over HTTPS at trydock.ai/api/mcp.
@@ -13,7 +13,7 @@
  *
  * How it's wired into clients: see ../configs/*.json for per-client
  * snippets. The pattern is always:
- *     npx -y @go-dock/mcp         with DOCK_API_KEY in env
+ *     npx -y @trydock/mcp         with DOCK_API_KEY in env
  *
  * No state, no persistence, no logging of request bodies. The bridge
  * is stateless — every call goes straight to the hosted server which
@@ -30,7 +30,7 @@ const ENDPOINT =
 if (!API_KEY) {
   process.stderr.write(
     [
-      "@go-dock/mcp: DOCK_API_KEY is required.",
+      "@trydock/mcp: DOCK_API_KEY is required.",
       "",
       "Get a key in Settings → API keys at https://trydock.ai.",
       "Then set it in your MCP client config, e.g.:",

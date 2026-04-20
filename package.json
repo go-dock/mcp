@@ -1,6 +1,6 @@
 {
-  "name": "@go-dock/mcp",
-  "version": "0.2.0",
+  "name": "@trydock/mcp",
+  "version": "0.3.1",
   "description": "Local stdio MCP bridge to Dock — point any MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue) at your Dock workspaces.",
   "bin": {
     "dock-mcp": "src/bridge.js"
@@ -13,17 +13,17 @@
     "README.md",
     "LICENSE"
   ],
-  "homepage": "https://godock.ai/docs/mcp",
-  "bugs": "https://github.com/go-dock/mcp/issues",
+  "homepage": "https://trydock.ai/docs/mcp",
+  "bugs": "https://github.com/try-dock-ai/mcp/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/go-dock/mcp.git"
+    "url": "git+https://github.com/try-dock-ai/mcp.git"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
     "dock",
-    "godock",
+    "trydock",
     "claude",
     "cursor",
     "windsurf",

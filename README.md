@@ -1,4 +1,4 @@
-# @go-dock/mcp
+# @trydock/mcp
 
 Local stdio bridge to the [Dock](https://trydock.ai) MCP server. Point any
 MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue)
@@ -23,7 +23,7 @@ at your Dock workspaces in one config change.
 
 ## Configs
 
-All clients follow the same pattern: run `npx -y @go-dock/mcp`, pass
+All clients follow the same pattern: run `npx -y @trydock/mcp`, pass
 `DOCK_API_KEY` in env. Per-client JSON snippets are in
 [`configs/`](./configs):
 
@@ -43,7 +43,7 @@ Example (Claude Desktop):
   "mcpServers": {
     "dock": {
       "command": "npx",
-      "args": ["-y", "@go-dock/mcp"],
+      "args": ["-y", "@trydock/mcp"],
       "env": {
         "DOCK_API_KEY": "dk_..."
       }

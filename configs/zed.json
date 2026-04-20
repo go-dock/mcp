@@ -3,7 +3,7 @@
     "dock": {
       "command": {
         "path": "npx",
-        "args": ["-y", "@go-dock/mcp"],
+        "args": ["-y", "@trydock/mcp"],
         "env": {
           "DOCK_API_KEY": "dk_..."
         }
