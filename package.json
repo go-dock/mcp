@@ -1,6 +1,6 @@
 {
   "name": "@trydock/mcp",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Local stdio MCP bridge to Dock — point any MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue) at your Dock workspaces.",
   "bin": {
     "dock-mcp": "src/bridge.js"
