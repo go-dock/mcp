@@ -1,5 +1,9 @@
 # @trydock/mcp
 
+[![npm version](https://img.shields.io/npm/v/%40trydock%2Fmcp?color=0A84FF&label=npm)](https://www.npmjs.com/package/@trydock/mcp)
+[![Published with provenance](https://img.shields.io/badge/npm-published%20with%20provenance-06D6A0?logo=npm)](https://docs.npmjs.com/generating-provenance-statements)
+[![License: MIT](https://img.shields.io/badge/license-MIT-8499B1)](./LICENSE)
+
 Local stdio bridge to the [Dock](https://trydock.ai) MCP server. Point any
 MCP-capable agent (Claude Desktop, Cursor, Windsurf, Zed, Cline, Continue)
 at your Dock workspaces in one config change.
